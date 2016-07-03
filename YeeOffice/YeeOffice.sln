@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 BusnissLogic", "03 Busni
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "YeeOffice.UserCenter.BusnissLogic", "YeeOffice.UserCenter.BusnissLogic\YeeOffice.UserCenter.BusnissLogic.xproj", "{50559925-7B5A-4589-A8E4-E4774D73DC0D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 Service", "04 Service", "{B805D262-76E7-43F3-B85D-2CA4CCE35409}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "YeeOffice.UserCenter.Service", "YeeOffice.UserCenter.Service\YeeOffice.UserCenter.Service.xproj", "{86C47D5C-DA69-4133-A0E6-CEBB5F4F62CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,10 @@ Global
 		{50559925-7B5A-4589-A8E4-E4774D73DC0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50559925-7B5A-4589-A8E4-E4774D73DC0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50559925-7B5A-4589-A8E4-E4774D73DC0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86C47D5C-DA69-4133-A0E6-CEBB5F4F62CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86C47D5C-DA69-4133-A0E6-CEBB5F4F62CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86C47D5C-DA69-4133-A0E6-CEBB5F4F62CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86C47D5C-DA69-4133-A0E6-CEBB5F4F62CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,5 +54,7 @@ Global
 		{1236823C-DD59-4DEB-BE18-971585FF69C6} = {318377A8-8B22-4C1C-B717-FDC623332D17}
 		{C353D91D-C6FA-4418-BB2B-565964A3A241} = {3CEAE251-E443-4B8D-BB65-BA1041B8AA6A}
 		{50559925-7B5A-4589-A8E4-E4774D73DC0D} = {C353D91D-C6FA-4418-BB2B-565964A3A241}
+		{B805D262-76E7-43F3-B85D-2CA4CCE35409} = {3CEAE251-E443-4B8D-BB65-BA1041B8AA6A}
+		{86C47D5C-DA69-4133-A0E6-CEBB5F4F62CF} = {B805D262-76E7-43F3-B85D-2CA4CCE35409}
 	EndGlobalSection
 EndGlobal
