@@ -11,6 +11,12 @@ namespace YeeOffice.UserCenter.DataAccess
         {
         }
 
+        public override void Save(params UserEntity[] entities)
+        {
+            base.Save(entities);
+            UnitOfWork.SaveChanges();
+        }
+
         public IList<UserEntity> GetItems()
         {
             var items = GetAllItems();
