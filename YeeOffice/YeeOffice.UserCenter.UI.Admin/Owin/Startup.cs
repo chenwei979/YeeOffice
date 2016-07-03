@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using YeeOffice.Common.DataAccess;
+using YeeOffice.UserCenter.BusnissLogic;
+using YeeOffice.UserCenter.DataAccess;
 
 namespace YeeOffice.UserCenter.UI.Admin
 {
@@ -37,6 +36,12 @@ namespace YeeOffice.UserCenter.UI.Admin
             services.AddApplicationInsightsTelemetry(Configuration);
 
             services.AddMvc();
+
+            services.AddTransient<IDatabase, SqlServerDatabase>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
+            services.AddTransient<UserDataAccess>();
+            services.AddTransient<UserBusnissLogic>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
