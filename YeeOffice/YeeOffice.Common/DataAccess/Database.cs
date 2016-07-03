@@ -75,7 +75,7 @@ namespace YeeOffice.Common.DataAccess
     {
         public SqlServerDatabase()
         {
-            ConnectionString = "data source=DESKTOP-056M100\\SQLEXPRESS;initial catalog=AkProjects;user id=sa;password=123;";
+            ConnectionString = "data source=Localhost\\SQLEXPRESS;initial catalog=YeeOffice;user id=sa;password=123;";
             DbConnection = new SqlConnection(ConnectionString);
         }
     }
