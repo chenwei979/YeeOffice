@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Ak.Projects.Common.DataAccess
+namespace YeeOffice.Common.DataAccess
 {
     public interface IRepository<TEntity> : IDisposable where TEntity : class, IEntity
     {

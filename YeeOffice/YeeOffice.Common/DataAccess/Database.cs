@@ -1,7 +1,7 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
 
-namespace Ak.Projects.Common.DataAccess
+namespace YeeOffice.Common.DataAccess
 {
     public abstract class Database : IDatabase
     {

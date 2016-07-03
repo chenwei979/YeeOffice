@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using Dapper;
 using Dapper.Contrib.Extensions;
 
-namespace Ak.Projects.Common.DataAccess
+namespace YeeOffice.Common.DataAccess
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class, IEntity
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 
-namespace Ak.Projects.Common.DataAccess
+namespace YeeOffice.Common.DataAccess
 {
     public interface IDatabase : IDbConnection, IDisposable
     {
