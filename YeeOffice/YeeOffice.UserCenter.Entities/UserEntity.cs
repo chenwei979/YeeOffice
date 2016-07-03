@@ -1,6 +1,6 @@
-﻿using YeeOffice.Common.DataAccess;
-using Dapper.Contrib.Extensions;
+﻿using Dapper.Contrib.Extensions;
 using System;
+using YeeOffice.Common.DataAccess;
 
 namespace YeeOffice.UserCenter.Entities
 {
