@@ -40,6 +40,19 @@ namespace YeeOffice.UserCenter.DataAccess
             return items;
         }
 
+        public bool Register(string displayname, string username, string password)
+        {
+            var user = new UserEntity()
+            {
+                Account = username,
+                Password = password,
+                DisplayName = displayname
+            };
+
+            Save(user);
+            return true;
+        }
+
         public bool Login(string username, string password)
         {
             var items = GetAllItems();

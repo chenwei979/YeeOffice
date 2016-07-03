@@ -33,5 +33,20 @@ namespace YeeOffice.UserCenter.UI.Admin.Controllers
             if (logined) return Redirect("/Home/Index/");
             return View();
         }
+
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Register(string displayname, string username, string password)
+        {
+            var success = BusnissLogic.Register(displayname, username, password);
+
+            if (success) return Redirect("/Home/Index/");
+            return View();
+        }
     }
 }
