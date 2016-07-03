@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using YeeOffice.Common.DataAccess;
 using YeeOffice.UserCenter.Entities;
 
@@ -37,6 +38,15 @@ namespace YeeOffice.UserCenter.DataAccess
             //UnitOfWork.SaveChanges();
 
             return items;
+        }
+
+        public bool Login(string username, string password)
+        {
+            var items = GetAllItems();
+            var user = items.Where(item => item.Account == username).FirstOrDefault();
+            if (user == null) return false;
+
+            return user.Password == password;
         }
     }
 }

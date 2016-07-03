@@ -19,6 +19,11 @@ namespace YeeOffice.UserCenter.BusnissLogic
             DataAccess.Save(entities);
         }
 
+        public bool Login(string username, string password)
+        {
+            return DataAccess.Login(username, password);
+        }
+
         public void GetItemById(long id)
         {
             DataAccess.GetItemById(id);

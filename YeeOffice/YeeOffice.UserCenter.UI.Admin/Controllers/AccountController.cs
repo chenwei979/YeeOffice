@@ -11,7 +11,14 @@ namespace YeeOffice.UserCenter.UI.Admin.Controllers
     public class AccountController : Controller
     {
         // GET: /<controller>/
+        [HttpGet]
         public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Login(string username,string password)
         {
             return View();
         }
