@@ -16,6 +16,11 @@ namespace YeeOffice.UserCenter.UI.Admin.RabbitMQ
             var factory = new ConnectionFactory() { HostName = "localhost" };
             Connection = factory.CreateConnection();
             Channel = Connection.CreateModel();
+            Channel.QueueDeclare(queue: this.GetType().FullName.Replace("Handler", string.Empty),
+                                durable: false,
+                                exclusive: false,
+                                autoDelete: false,
+                                arguments: null);
         }
 
         public void Dispose()

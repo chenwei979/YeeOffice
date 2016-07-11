@@ -2,17 +2,8 @@
 
 namespace YeeOffice.UserCenter.UI.Admin.RabbitMQ.AccountRegister
 {
-    public class AccountRegisterMessageProducer : MessagePublisher<UserEntity>
+    public class AccountRegisterMessagePublisher : MessagePublisher<UserEntity>
     {
-        public AccountRegisterMessageProducer()
-        {
-            Channel.QueueDeclare(queue: "hello",
-                durable: false,
-                exclusive: false,
-                autoDelete: false,
-                arguments: null);
-        }
-
         public override void Push(UserEntity message)
         {
             //var message = "Hello World!";

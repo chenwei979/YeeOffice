@@ -9,12 +9,6 @@ namespace YeeOffice.UserCenter.UI.Admin.RabbitMQ.AccountRegister
     {
         public override void Hand(UserEntity message)
         {
-            //创建一个名为"hello"的队列，防止producer端没有创建该队列
-            Channel.QueueDeclare(queue: "hello",
-                                 durable: false,
-                                 exclusive: false,
-                                 autoDelete: false,
-                                 arguments: null);
 
             //回调，当consumer收到消息后会执行该函数
             var consumer = new EventingBasicConsumer(Channel);
