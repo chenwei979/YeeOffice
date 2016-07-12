@@ -1,4 +1,6 @@
-﻿using YeeOffice.UserCenter.Entities;
+﻿using ProtoBuf;
+using System.IO;
+using YeeOffice.UserCenter.Entities;
 
 namespace YeeOffice.UserCenter.UI.Admin.RabbitMQ.AccountRegister
 {
@@ -6,8 +8,8 @@ namespace YeeOffice.UserCenter.UI.Admin.RabbitMQ.AccountRegister
     {
         public override void Push(UserEntity message)
         {
-            var body = Encoding.UTF8.GetBytes(message);
-            Channel.BasicPublish(exchange: string.Empty, routingKey: "hello", basicProperties: null, body: body);
+            var bytes = Serialize(message);
+            Channel.BasicPublish(exchange: string.Empty, routingKey: "hello", basicProperties: null, body: bytes);
         }
     }
 }

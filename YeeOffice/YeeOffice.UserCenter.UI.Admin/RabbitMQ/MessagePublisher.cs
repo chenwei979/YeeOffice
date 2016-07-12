@@ -1,4 +1,7 @@
-﻿using RabbitMQ.Client;
+﻿using System;
+using RabbitMQ.Client;
+using System.IO;
+using ProtoBuf;
 
 namespace YeeOffice.UserCenter.UI.Admin.RabbitMQ
 {
@@ -26,5 +29,15 @@ namespace YeeOffice.UserCenter.UI.Admin.RabbitMQ
         }
 
         public abstract void Push(TMessage message);
+
+        public byte[] Serialize(TMessage message)
+        {
+            var stream = new MemoryStream();
+            Serializer.Serialize(stream, message);
+            var bytes = new byte[stream.Length];
+            stream.Read(bytes, 0, bytes.Length);
+            stream.Seek(0, SeekOrigin.Begin);
+            return bytes;
+        }
     }
 }
