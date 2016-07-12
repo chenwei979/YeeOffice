@@ -22,7 +22,8 @@
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
     "YeeOffice.UserCenter.BusnissLogic": "1.0.0-*",
-    "RabbitMQ.Client": "4.0.0-*"
+    "RabbitMQ.Client": "4.0.0-*",
+    "protobuf-net": "2.1.0"
   },
 
   "tools": {

@@ -6,14 +6,8 @@ namespace YeeOffice.UserCenter.UI.Admin.RabbitMQ.AccountRegister
     {
         public override void Push(UserEntity message)
         {
-            //var message = "Hello World!";
-            //var body = Encoding.UTF8.GetBytes(message);
-
-            ////向该消息队列发送消息message
-            //Channel.BasicPublish(exchange: "",
-            //    routingKey: "hello",
-            //    basicProperties: null,
-            //    body: body);
+            var body = Encoding.UTF8.GetBytes(message);
+            Channel.BasicPublish(exchange: string.Empty, routingKey: "hello", basicProperties: null, body: body);
         }
     }
 }
