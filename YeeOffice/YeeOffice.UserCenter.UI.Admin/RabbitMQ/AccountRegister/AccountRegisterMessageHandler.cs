@@ -9,10 +9,6 @@ namespace YeeOffice.UserCenter.UI.Admin.RabbitMQ.AccountRegister
     {
         public override void Hand(UserEntity message)
         {
-
-            //回调，当consumer收到消息后会执行该函数
-            
-
             
         }
     }
